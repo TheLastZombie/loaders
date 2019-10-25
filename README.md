@@ -14,7 +14,7 @@ Downloads all images collected by [Archillect](http://archillect.com/), the synt
 
 Downloads all scenes including photo, video and audio assets from [Calm](https://www.calm.com/meditate).
 
-## [Deezer Downloader](https://gist.github.com/TheLastZombie/107de3d9db37c54f8aacc73fc54c6812)
+## [Deezer Downloader](https://github.com/TheLastZombie/loaders/blob/master/Deezer%20Downloader.js)
 
 Downloads a specified [Deezer](https://www.deezer.com/de/) track in the highest available format and bitrate.
 

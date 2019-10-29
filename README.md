@@ -26,6 +26,8 @@ Downloads all available Discord emotes from [Discord Emoji](https://discordemoji
 
 Downloads photos, snapshots, music tracks and soundscapes for every heritage from the [α CLOCK](https://www.sony.net/united/clock/) project.
 
+**Heritage Downloader has been discontinued. Please use [α CLOCK Desktop](https://github.com/TheLastZombie/Alpha-CLOCK-Desktop) instead.**
+
 ## HicceArs Downloader
 
 Downloads galleries and images from the specified [HicceArs](https://hiccears.com/) artists.

@@ -2,48 +2,97 @@
 
 Automatic downloaders for various webpages and applications.
 
-## [Abstruct Downloader](https://github.com/TheLastZombie/loaders/blob/master/Abstruct%20Downloader.py)
+<details><summary>Abstruct Downloader</summary><br>
+<p>Downloads all wallpapers from the <a href="http://abstruct.co">Abstruct</a> collection by Hampus Olsson.</p>
+</details>
 
-Downloads all wallpapers from the [Abstruct](http://abstruct.co) collection by Hampus Olsson.
+<details><summary>Archillect Downloader</summary><br>
+<p>Downloads all images collected by <a href="http://archillect.com/">Archillect</a>, the synthetic intelligence.
 
-## [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/Archillect%20Downloader.js)
+```
+Archillect Downloader v1.1
 
-Downloads all images collected by [Archillect](http://archillect.com/), the synthetic intelligence.
+Importing dependencies...
+Creating download directory...
+Retrieving latest image ID...
 
-## [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/Calm%20Downloader.js)
+Downloading 1/250000 (1)...
+```
 
-Downloads all scenes including photo, video and audio assets from [Calm](https://www.calm.com/meditate).
+</p>
+</details>
 
-## [Deezer Downloader](https://github.com/TheLastZombie/loaders/blob/master/Deezer%20Downloader.js)
+<details><summary>Calm Downloader</summary><br>
+<p>Downloads all scenes including photo, video and audio assets from <a href="https://www.calm.com/meditate">Calm</a>.</p>
+</details>
 
-Downloads a specified [Deezer](https://www.deezer.com/de/) track in the highest available format and bitrate.
+<details><summary>Deezer Downloader</summary><br>
+<p>Downloads a specified <a href="https://www.deezer.com/de/">Deezer</a> track in the highest available format and bitrate.</p>
+</details>
 
-## [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/Emoji%20Downloader.js)
+<details><summary>Emoji Downloader</summary><br>
+<p>Downloads all available Discord emotes from <a href="https://discordemoji.com/">Discord Emoji</a>.
 
-Downloads all available Discord emotes from [Discord Emoji](https://discordemoji.com/).
+```
+Emoji Downloader v1.0
 
-## [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/Heritage%20Downloader.js)
+Importing dependencies...
+Creating download directory...
+Retrieving emoji database...
 
-Downloads photos, snapshots, music tracks and soundscapes for every heritage from the [α CLOCK](https://www.sony.net/united/clock/) project.
+Downloading 1/5000 (6188)...
+```
 
-**Heritage Downloader has been discontinued. Please use [α CLOCK Desktop](https://github.com/TheLastZombie/Alpha-CLOCK-Desktop) instead.**
+</p>
+</details>
 
-## HicceArs Downloader
+<details><summary>Heritage Downloader</summary><br>
+<p>Downloads photos, snapshots, music tracks and soundscapes for every heritage from the <a href="https://www.sony.net/united/clock/">α CLOCK</a> project.<br>
+<b>Heritage Downloader has been discontinued. Please use <a href="https://github.com/TheLastZombie/Alpha-CLOCK-Desktop">α CLOCK Desktop</a> instead.</b>
 
-Downloads galleries and images from the specified [HicceArs](https://hiccears.com/) artists.
+```
+Heritage Downloader v1.0
 
-## [KHInsider Downloader](https://github.com/TheLastZombie/VGMLoader)
+Importing dependencies...
+Creating download directory...
+Retrieving heritage database...
 
-Automatically downloads soundtrack albums from [KHInsider](https://downloads.khinsider.com/).
+Downloading 1/50 (iguazu)...
+```
 
-## [Nico Nico Downloader](https://github.com/TheLastZombie/loaders/blob/master/Nico%20Nico%20Downloader.js)
+</p>
+</details>
 
-Downloads all medleys / files from the [Nico Nico Douga Medley Database](http://kumikyoku.rintaun.net/).
+<details><summary>HicceArs Downloader</summary><br>
+<p>Downloads galleries and images from the specified <a href="https://hiccears.com/">HicceArs</a> artists.</p>
+</details>
 
-## [Wallpaper Downloader](https://thelastzombie.github.io/loaders/Wallpaper%20Downloader.html)
+<details><summary>KHInsider Downloader</summary><br>
+<p>Automatically downloads soundtrack albums from <a href="https://downloads.khinsider.com/">KHInsider</a>.</p>
+</details>
 
-WIP downloader for various Android wallpaper applications that runs in your browser.
+<details><summary>Nico Nico Downloader</summary><br>
+<p>Downloads all medleys / files from the <a href="http://kumikyoku.rintaun.net/">Nico Nico Douga Medley Database</a>.</p>
+  
+```
+Nico Nico Downloader v1.0
 
-## [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/yiff.party%20Downloader.js)
+Importing dependencies...
+Creating download directory...
+Retrieving version list...
+Parsing version list...
 
-Downloads the creators and all artist-specific JSON files from [yiff.party](https://yiff.party/).
+Creating category: Chuudoku no Kata e Okuru Ikkyoku...
+Downloading file: Original Karaoke ver....
+```
+
+</p>
+</details>
+
+<details><summary>Wallpaper Downloader</summary><br>
+<p>WIP downloader for various Android wallpaper applications that runs in your browser.</p>
+</details>
+
+<details><summary>yiff.party Downloader</summary><br>
+<p>Downloads the creators and all artist-specific JSON files from <a href="https://yiff.party/">yiff.party</a>.</p>
+</details>

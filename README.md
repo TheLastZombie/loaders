@@ -3,7 +3,22 @@
 Automatic downloaders for various webpages and applications.
 
 <details><summary>Abstruct Downloader</summary><br>
-<p>Downloads all wallpapers from the <a href="http://abstruct.co">Abstruct</a> collection by Hampus Olsson.</p>
+<p>Downloads all wallpapers from the <a href="http://abstruct.co">Abstruct</a> collection by Hampus Olsson.
+  
+```
+Importing modules...
+Creating directory...
+Loading categories...
+8 categories found.
+Creating BLEND directory...
+Loading amount of pages...
+4 pages found.
+Loading page 1...
+14 images found.
+Downloading Crystallization...
+```
+
+</p>
 </details>
 
 <details><summary>Archillect Downloader</summary><br>

@@ -86,24 +86,6 @@ Downloading 1/50 (iguazu)...
 <p>Automatically downloads soundtrack albums from <a href="https://downloads.khinsider.com/">KHInsider</a>.</p>
 </details>
 
-<details><summary>Nico Nico Downloader</summary><br>
-<p>Downloads all medleys / files from the <a href="http://kumikyoku.rintaun.net/">Nico Nico Douga Medley Database</a>.</p>
-  
-```
-Nico Nico Downloader v1.0
-
-Importing dependencies...
-Creating download directory...
-Retrieving version list...
-Parsing version list...
-
-Creating category: Chuudoku no Kata e Okuru Ikkyoku...
-Downloading file: Original Karaoke ver....
-```
-
-</p>
-</details>
-
 <details><summary>Wallpaper Downloader</summary><br>
 <p>WIP downloader for various Android wallpaper applications that runs in your browser.</p>
 </details>

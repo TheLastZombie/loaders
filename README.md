@@ -53,6 +53,23 @@ Downloading 1/2747 (76500)...
 </p>
 </details>
 
+<details><summary>Behang Downloader</summary><br>
+<p>Downloads all wallpapers from <a href="https://knokfirst.com/behang/">Behang</a> via their semi-public API.
+
+```
+Behang Downloader v1.0
+
+Importing dependencies...
+Creating download directory...
+Getting wallpaper list...
+
+Downloading category 1/38 (Colorgasm)...
+Downloading image 1/8 (Colorgasm1)...
+```
+
+</p>
+</details>
+
 <details><summary>Calm Downloader</summary><br>
 <p>Downloads all scenes including photo, video and audio assets from <a href="https://www.calm.com/meditate">Calm</a>.
 

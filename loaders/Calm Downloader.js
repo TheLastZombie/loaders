@@ -1,5 +1,5 @@
 // Show header
-console.log("Calm Downloader v1.0");
+console.log("Calm Downloader v1.1");
 console.log("");
 
 // Import dependencies
@@ -22,8 +22,13 @@ if (fs.existsSync("Calm Downloader")) {
 // Get scene database
 console.log("Retrieving scene database...");
 console.log("");
-request("https://www.calm.com/meditate", function (error, response, body) {
-	eval(body.split("\n")[42].substring(17));
+request({
+	url: "https://api.app.aws-prod.useast1.calm.com/scenes",
+	headers: {
+		"x-device-platform": "www"
+	}
+}, function (error, response, body) {
+	var globalModels = JSON.parse(body);
 
 	// Do for each scene
 	for (i = 0; i < globalModels.scenes.length; i++) {
@@ -37,19 +42,19 @@ request("https://www.calm.com/meditate", function (error, response, body) {
 
 		// Download audio
 		if (globalModels.scenes[i].audio) {
-			exec("wget", ["-q", globalModels.scenes[i].audio]);
+			exec("wget", ["-q", globalModels.scenes[i].audio.url]);
 			process.stdout.write(".");
 		};
 
 		// Download video
 		if (globalModels.scenes[i].video) {
-			exec("wget", ["-q", globalModels.scenes[i].video]);
+			exec("wget", ["-q", globalModels.scenes[i].video.url]);
 			process.stdout.write(".");
 		};
 
 		// Download image
 		if (globalModels.scenes[i].image) {
-			exec("wget", ["-q", globalModels.scenes[i].image]);
+			exec("wget", ["-q", globalModels.scenes[i].image.url]);
 			process.stdout.write(".");
 		};
 

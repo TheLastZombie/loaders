@@ -37,6 +37,22 @@ Downloading 1/250000 (1)...
 </p>
 </details>
 
+<details><summary>Backdrops Downloader</summary><br>
+<p>Downloads all wallpapers from <a href="https://backdrops.io/">Backdrops</a> via their semi-public API.
+
+```
+Backdrops Downloader v1.0
+
+Importing dependencies...
+Creating download directory...
+Getting wallpaper list...
+
+Downloading 1/2747 (76500)...
+```
+
+</p>
+</details>
+
 <details><summary>Calm Downloader</summary><br>
 <p>Downloads all scenes including photo, video and audio assets from <a href="https://www.calm.com/meditate">Calm</a>.
 

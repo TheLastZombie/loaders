@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "adm-zip": "^0.4.14",
+    "axios": "^0.19.2",
     "lodash": "^4.17.15",
     "request": "^2.88.2",
     "sanitize-filename": "^1.6.3",

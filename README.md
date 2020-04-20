@@ -4,7 +4,7 @@ Automatic downloaders for various webpages and applications.
 
 <details><summary>Abstruct Downloader</summary><br>
 <p>Downloads all wallpapers from the <a href="http://abstruct.co">Abstruct</a> collection by Hampus Olsson.
-  
+
 ```
 Importing modules...
 Creating directory...
@@ -88,10 +88,6 @@ Downloading 1/50 (iguazu)...
 ```
 
 </p>
-</details>
-
-<details><summary>Wallpaper Downloader</summary><br>
-<p>WIP downloader for various Android wallpaper applications that runs in your browser.</p>
 </details>
 
 <details><summary>yiff.party Downloader</summary><br>

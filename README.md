@@ -106,6 +106,22 @@ Downloading 1/50 (iguazu)...
 </p>
 </details>
 
+<details><summary>Wallpaperboard Downloader</summary><br>
+<p>Downloads all wallpapers from a <a href="https://github.com/danimahardhika/wallpaperboard">Wallpaperboard</a> source.
+
+```
+Wallpaperboard Downloader v1.0
+
+Importing dependencies...
+Creating download directory...
+Getting wallpaper list...
+
+Downloading 1/28 (Nougat Wallpaper 1)...
+```
+
+</p>
+</details>
+
 <details><summary>yiff.party Downloader</summary><br>
 <p>Downloads the creators and all artist-specific JSON files from <a href="https://yiff.party/">yiff.party</a>.
 

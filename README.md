@@ -38,7 +38,19 @@ Downloading 1/250000 (1)...
 </details>
 
 <details><summary>Calm Downloader</summary><br>
-<p>Downloads all scenes including photo, video and audio assets from <a href="https://www.calm.com/meditate">Calm</a>.</p>
+<p>Downloads all scenes including photo, video and audio assets from <a href="https://www.calm.com/meditate">Calm</a>.
+
+```
+Calm Downloader v1.1
+
+Importing dependencies...
+Creating download directory...
+Retrieving scene database...
+
+Downloading 1/39 (ZFlV8dbxPd)...
+```
+
+</p>
 </details>
 
 <details><summary>Deezer Downloader</summary><br>
@@ -78,18 +90,22 @@ Downloading 1/50 (iguazu)...
 </p>
 </details>
 
-<details><summary>HicceArs Downloader</summary><br>
-<p>Downloads galleries and images from the specified <a href="https://hiccears.com/">HicceArs</a> artists.</p>
-</details>
-
-<details><summary>KHInsider Downloader</summary><br>
-<p>Automatically downloads soundtrack albums from <a href="https://downloads.khinsider.com/">KHInsider</a>.</p>
-</details>
-
 <details><summary>Wallpaper Downloader</summary><br>
 <p>WIP downloader for various Android wallpaper applications that runs in your browser.</p>
 </details>
 
 <details><summary>yiff.party Downloader</summary><br>
-<p>Downloads the creators and all artist-specific JSON files from <a href="https://yiff.party/">yiff.party</a>.</p>
+<p>Downloads the creators and all artist-specific JSON files from <a href="https://yiff.party/">yiff.party</a>.
+
+```
+yiff.party Downloader v1.1
+
+Importing dependencies...
+Creating download directory...
+Retrieving creator database...
+
+Downloading 1/20443 (25634849)...
+```
+
+</p>
 </details>

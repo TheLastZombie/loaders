@@ -6,7 +6,6 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const _ = require("lodash");
 const sanitize = require("sanitize-filename");
 const exec = require("child_process").execFileSync;
 const AdmZip = require("adm-zip");
@@ -28,8 +27,8 @@ axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(respo
 	eval(response.data);
 
 	// Do for each heritage
-	for (i = 0; i < _.size(a_clock_heritage_data); i++) {
-		process.stdout.write("Downloading " + (i + 1) + "/" + _.size(a_clock_heritage_data) + " (" + a_clock_heritage_data[i].id + ").");
+	for (i = 0; i < a_clock_heritage_data.length; i++) {
+		process.stdout.write("Downloading " + (i + 1) + "/" + a_clock_heritage_data.length + " (" + a_clock_heritage_data[i].id + ").");
 		fs.mkdirSync(sanitize(a_clock_heritage_data[i].name.en, {
 			replacement: "_"
 		}));
@@ -51,41 +50,41 @@ axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(respo
 
 		// Download photos
 		for (j = 0; j < 12; j++) {
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/3840_2160/fp/" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/3840_2160/fp/" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1200/fp/" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1200/fp/" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1080/fp/" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1080/fp/" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1280_1024/fp/" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1280_1024/fp/" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
 		};
 
 		// Download snapshots
 		for (j = 0; j < 10; j++) {
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/3840_2160/ss/" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/3840_2160/ss/" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1200/ss/" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1200/ss/" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1080/ss/" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1080/ss/" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
-			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1280_1024/ss/" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + _.padStart(j + 1, 2, 0) + ".zip"]);
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + _.padStart(j + 1, 2, 0) + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + _.padStart(j + 1, 2, 0) + ".zip");
+			exec("wget", ["-q", "https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1280_1024/ss/" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + (j + 1).toString().padStart(2, "0") + ".zip"]);
+			new AdmZip("./" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
 		};
 

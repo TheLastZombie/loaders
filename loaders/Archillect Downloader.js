@@ -6,7 +6,6 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const reqsync = require("sync-request");
 const exec = require("child_process").execFileSync;
 
 // Create directory
@@ -29,7 +28,7 @@ axios("http://archillect.com/").then(response => {
 		console.log("Downloading " + (i + 1) + "/" + response.data.match(/<a class="post" href="\/\d+">/).toString().slice(23, -2) + " (" + (i + 1) + ")...");
 
 		// Download image file
-		var temp = reqsync("GET", "http://archillect.com/" + (i + 1)).getBody("utf8");
+		var temp = exec("wget", ["-q", "http://archillect.com/" + (i + 1), "-O", "-"]).toString();
 		exec("wget", ["-q", temp.match(/<img id="ii" src=".+">/).toString().slice(18, -2)]);
 
 	};

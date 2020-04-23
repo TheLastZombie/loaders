@@ -1,20 +1,18 @@
-const request = require("request");
+const axios = require("axios");
 const crypto = require("crypto");
 
 // var id = "12345";
 
-request({
+axios({
 	url: "https://www.deezer.com/ajax/gw-light.php?method=deezer.ping&api_version=1.0&api_token",
 	headers: {
 		"Cookie": "arl=79437723c0024e17559a2f26b2d5023373506cdadd5e29dceda8c7b0aa03accaa40b4b17e8f8d21743edef40a2a16fca3511b5be4ca15c26c871082543c08893c0dd89f0d415378957e05179b3e7ec2c93625d5a8cf2d51a0d177de1a9833aff"
 	}
-}, function (error, response, body) {
+}).then(response => {
 
-	if (error) throw error;
-
-	request({
+	axios({
 		method: "POST",
-		url: "https://api.deezer.com/1.0/gateway.php?method=song.getData&api_key=ZAIVAHCEISOHWAICUQUEXAEPICENGUAFAEZAIPHAELEEVAHPHUCUFONGUAPASUAY&input=3&output=3&sid=" + JSON.parse(body).results.SESSION,
+		url: "https://api.deezer.com/1.0/gateway.php?method=song.getData&api_key=ZAIVAHCEISOHWAICUQUEXAEPICENGUAFAEZAIPHAELEEVAHPHUCUFONGUAPASUAY&input=3&output=3&sid=" + response.data.results.SESSION,
 		headers: {
 			"User-Agent": "User-Agent: Deezer/7.17.0.2 CFNetwork/1098.6 Darwin/19.0.0",
 			"Cache-Control": "max-age=0",
@@ -22,14 +20,12 @@ request({
 			"Accept-Charset": "utf-8,ISO-8859-1;q=0.8,*;q=0.7",
 			"Content-Type": "text/plain;charset=UTF-8",
 		},
-		json: {
+		data: {
 			sng_id: id
 		}
-	}, function (error, response, body) {
+	}).then(response => {
 
-		if (error) throw error;
-
-		results = body.results;
+		results = response.data.results;
 
 		results.MD5_ORIGIN = results.PUID;
 
@@ -49,12 +45,10 @@ request({
 		while (step2.length % 16 > 0) step2 += " ";
 		var step3 = crypto.createCipheriv("aes-128-ecb", "jo6aey6haid2Teih", "").update(step2, "ascii", "hex");
 
-		request({
+		axios({
 			url: "http://e-cdn-proxy-" + results.PUID[0] + ".deezer.com/mobile/1/" + step3,
-			encoding: null
-		}, function (error, response, body) {
-
-			if (error) throw error;
+			responseType: "arraybuffer"
+		}).then(response => {
 
 			var chunksize;
 
@@ -70,17 +64,17 @@ request({
 			var i = 0;
 			var position = 0;
 
-			var destbuffer = Buffer.alloc(body.length);
+			var destbuffer = Buffer.alloc(response.data.length);
 			destbuffer.fill(0);
 
-			while (position < body.length) {
+			while (position < response.data.length) {
 
 				var chunk;
 
-				if ((body.length - position) >= 2048) {
+				if ((response.data.length - position) >= 2048) {
 					chunksize = 2048;
 				} else {
-					chunksize = body.length - position;
+					chunksize = response.data.length - position;
 				};
 
 				chunk = Buffer.alloc(chunksize);
@@ -89,7 +83,7 @@ request({
 
 				chunk.fill(0);
 
-				body.copy(chunk, 0, position, position + chunksize);
+				response.data.copy(chunk, 0, position, position + chunksize);
 
 				if (i % 3 > 0 || chunksize < 2048) {
 					chunkstring = chunk.toString("binary");

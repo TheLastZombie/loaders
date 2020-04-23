@@ -107,8 +107,7 @@ Downloading 1/5000 (6188)...
 </details>
 
 <details><summary>Heritage Downloader</summary><br>
-<p>Downloads photos, snapshots, music tracks and soundscapes for every heritage from the <a href="https://www.sony.net/united/clock/">α CLOCK</a> project.<br>
-<b>Heritage Downloader has been discontinued. Please use <a href="https://github.com/TheLastZombie/Alpha-CLOCK-Desktop">α CLOCK Desktop</a> instead.</b>
+<p>Downloads photos, snapshots, music tracks and soundscapes for every heritage from the <a href="https://www.sony.net/united/clock/">α CLOCK</a> project.
 
 ```
 Heritage Downloader v1.0

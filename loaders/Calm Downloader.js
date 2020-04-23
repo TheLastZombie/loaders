@@ -5,7 +5,7 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const fs = require("fs");
-const request = require("request");
+const axios = require("axios");
 const sanitize = require("sanitize-filename");
 const exec = require("child_process").execFileSync;
 
@@ -22,13 +22,13 @@ if (fs.existsSync("Calm Downloader")) {
 // Get scene database
 console.log("Retrieving scene database...");
 console.log("");
-request({
+axios({
 	url: "https://api.app.aws-prod.useast1.calm.com/scenes",
 	headers: {
 		"x-device-platform": "www"
 	}
-}, function (error, response, body) {
-	var globalModels = JSON.parse(body);
+}).then(response => {
+	var globalModels = response.data;
 
 	// Do for each scene
 	for (i = 0; i < globalModels.scenes.length; i++) {

@@ -5,7 +5,7 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const fs = require("fs");
-const request = require("request");
+const axios = require("axios");
 const _ = require("lodash");
 const sanitize = require("sanitize-filename");
 const exec = require("child_process").execFileSync;
@@ -24,8 +24,8 @@ if (fs.existsSync("Heritage Downloader")) {
 // Get heritage database
 console.log("Retrieving heritage database...");
 console.log("");
-request("https://www.sony.net/united/clock/assets/js/heritage_data.js", function (error, response, body) {
-	eval(body);
+axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(response => {
+	eval(response.data);
 
 	// Do for each heritage
 	for (i = 0; i < _.size(a_clock_heritage_data); i++) {
@@ -92,5 +92,7 @@ request("https://www.sony.net/united/clock/assets/js/heritage_data.js", function
 		// Return and flush
 		process.chdir("..");
 		console.log("");
+
 	};
+
 });

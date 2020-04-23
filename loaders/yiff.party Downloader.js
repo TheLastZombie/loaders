@@ -5,7 +5,7 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const fs = require("fs");
-const request = require("request");
+const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
@@ -21,14 +21,14 @@ if (fs.existsSync("yiff.party Downloader")) {
 // Get creator database
 console.log("Retrieving creator database...");
 console.log("");
-request("https://yiff.party/json/creators.json", function (error, response, body) {
-	fs.writeFileSync("creators.json", body);
+axios("https://yiff.party/json/creators.json").then(response => {
+	fs.writeFileSync("creators.json", response.data);
 
 	// Do for each creator
-	for (i = 0; i < JSON.parse(body).creators.length; i++) {
-		console.log("Downloading " + (i + 1) + "/" + JSON.parse(body).creators.length + " (" + JSON.parse(body).creators[i].id + ")...");
+	for (i = 0; i < response.data.creators.length; i++) {
+		console.log("Downloading " + (i + 1) + "/" + response.data.creators.length + " (" + response.data.creators[i].id + ")...");
 
 		// Download creator file
-		exec("wget", ["-q", "https://yiff.party/" + JSON.parse(body).creators[i].id + ".json"]);
+		exec("wget", ["-q", "https://yiff.party/" + response.data.creators[i].id + ".json"]);
 	};
 });

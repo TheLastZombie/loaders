@@ -5,7 +5,7 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const fs = require("fs");
-const request = require("request");
+const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
@@ -21,13 +21,15 @@ if (fs.existsSync("Emoji Downloader")) {
 // Get emoji database
 console.log("Retrieving emoji database...");
 console.log("");
-request("https://discordemoji.com/api", function (error, response, body) {
+axios("https://discordemoji.com/api").then(response => {
 
 	// Do for each emoji
-	for (i = 0; i < JSON.parse(body).length; i++) {
-		console.log("Downloading " + (i + 1) + "/" + JSON.parse(body).length + " (" + JSON.parse(body)[i].id + ")...");
+	for (i = 0; i < response.data.length; i++) {
+		console.log("Downloading " + (i + 1) + "/" + response.data.length + " (" + response.data[i].id + ")...");
 
 		// Download emoji file
-		exec("wget", ["-q", JSON.parse(body)[i].image]);
+		exec("wget", ["-q", response.data[i].image]);
+
 	};
+
 });

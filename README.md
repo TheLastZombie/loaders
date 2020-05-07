@@ -106,6 +106,25 @@ Downloading 1/5000 (6188)...
 </p>
 </details>
 
+<details><summary>Facets Downloader</summary><br>
+<p>Downloads all <a href="http://www.facets.la/">Facets</a> images in all available resolutions via the app's facets.db.
+
+```
+Facets Downloader v1.0
+
+Importing dependencies...
+Creating download directory...
+Importing Facets database...
+Parsing imported database...
+
+Downloading Facets 365...
+
+Downloading 1/364 (Facets)...
+```
+
+</p>
+</details>
+
 <details><summary>Heritage Downloader</summary><br>
 <p>Downloads photos, snapshots, music tracks and soundscapes for every heritage from the <a href="https://www.sony.net/united/clock/">α CLOCK</a> project.
 

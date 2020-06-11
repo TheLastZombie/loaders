@@ -106,6 +106,26 @@ Downloading 1/5000 (6188)...
 </p>
 </details>
 
+<details><summary>Earth View Downloader</summary><br>
+<p>Downloads all images from the <a href="https://earthview.withgoogle.com/">Earth View</a> collection by Google.
+
+```
+Earth View Downloader v1.0
+
+Importing dependencies...
+Creating download directory...
+
+? Which host do you want to download from? earthview.withgoogle.com (watermarked)
+
+Some images will be skipped. This is not a bug.
+Not all digits within the 1003 to 7023 range are mapped to images.
+
+Downloading 1/6021 (1003)...
+```
+
+</p>
+</details>
+
 <details><summary>Facets Downloader</summary><br>
 <p>Downloads all <a href="http://www.facets.la/">Facets</a> images in all available resolutions via the app's facets.db.
 

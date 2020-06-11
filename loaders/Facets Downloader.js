@@ -1,5 +1,5 @@
 // Show header
-console.log("Facets Downloader v1.0");
+console.log("Facets Downloader");
 console.log("");
 
 // Import dependencies

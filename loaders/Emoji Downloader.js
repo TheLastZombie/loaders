@@ -1,5 +1,5 @@
 // Show header
-console.log("Emoji Downloader v1.0");
+console.log("Emoji Downloader");
 console.log("");
 
 // Import dependencies

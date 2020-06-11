@@ -1,5 +1,5 @@
 // Show header
-console.log("Wallpaperboard Downloader v1.0");
+console.log("Wallpaperboard Downloader");
 console.log("");
 
 // Import dependencies

@@ -1,5 +1,5 @@
 // Show header
-console.log("Calm Downloader v1.1");
+console.log("Calm Downloader");
 console.log("");
 
 // Import dependencies

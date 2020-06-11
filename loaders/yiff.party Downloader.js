@@ -1,5 +1,5 @@
 // Show header
-console.log("yiff.party Downloader v1.1");
+console.log("yiff.party Downloader");
 console.log("");
 
 // Import dependencies

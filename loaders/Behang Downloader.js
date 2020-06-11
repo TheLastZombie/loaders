@@ -1,5 +1,5 @@
 // Show header
-console.log("Behang Downloader v1.0");
+console.log("Behang Downloader");
 console.log("");
 
 // Import dependencies

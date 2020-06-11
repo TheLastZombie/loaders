@@ -1,5 +1,5 @@
 // Show header
-console.log("Heritage Downloader v1.0");
+console.log("Heritage Downloader");
 console.log("");
 
 // Import dependencies

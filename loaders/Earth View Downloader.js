@@ -1,5 +1,5 @@
 // Show header
-console.log("Earth View Downloader v1.0");
+console.log("Earth View Downloader");
 console.log("");
 
 // Import dependencies

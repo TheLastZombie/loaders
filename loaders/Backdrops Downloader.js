@@ -1,5 +1,5 @@
 // Show header
-console.log("Backdrops Downloader v1.0");
+console.log("Backdrops Downloader");
 console.log("");
 
 // Import dependencies

@@ -1,5 +1,5 @@
 // Show header
-console.log("Archillect Downloader v1.1");
+console.log("Archillect Downloader");
 console.log("");
 
 // Import dependencies

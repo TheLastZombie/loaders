@@ -9,13 +9,13 @@ const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Emoji Downloader")) {
+if (fs.existsSync("Discord Emoji")) {
 	console.log("Directory already exists! Aborting...");
 	return;
 } else {
 	console.log("Creating download directory...");
-	fs.mkdirSync("Emoji Downloader");
-	process.chdir("Emoji Downloader");
+	fs.mkdirSync("Discord Emoji");
+	process.chdir("Discord Emoji");
 };
 
 // Get emoji database

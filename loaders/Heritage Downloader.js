@@ -11,13 +11,13 @@ const exec = require("child_process").execFileSync;
 const AdmZip = require("adm-zip");
 
 // Create directory
-if (fs.existsSync("Heritage Downloader")) {
+if (fs.existsSync("α CLOCK")) {
 	console.log("Directory already exists! Aborting...");
 	return;
 } else {
 	console.log("Creating download directory...");
-	fs.mkdirSync("Heritage Downloader");
-	process.chdir("Heritage Downloader");
+	fs.mkdirSync("α CLOCK");
+	process.chdir("α CLOCK");
 };
 
 // Get heritage database

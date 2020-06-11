@@ -9,13 +9,13 @@ const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Archillect Downloader")) {
+if (fs.existsSync("Archillect")) {
 	console.log("Directory already exists! Aborting...");
 	return;
 } else {
 	console.log("Creating download directory...");
-	fs.mkdirSync("Archillect Downloader");
-	process.chdir("Archillect Downloader");
+	fs.mkdirSync("Archillect");
+	process.chdir("Archillect");
 };
 
 // Get latest image ID

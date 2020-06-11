@@ -9,13 +9,13 @@ const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("yiff.party Downloader")) {
+if (fs.existsSync("yiff.party")) {
 	console.log("Directory already exists! Aborting...");
 	return;
 } else {
 	console.log("Creating download directory...");
-	fs.mkdirSync("yiff.party Downloader");
-	process.chdir("yiff.party Downloader");
+	fs.mkdirSync("yiff.party");
+	process.chdir("yiff.party");
 };
 
 // Get creator database

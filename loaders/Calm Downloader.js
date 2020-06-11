@@ -10,13 +10,13 @@ const sanitize = require("sanitize-filename");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Calm Downloader")) {
+if (fs.existsSync("Calm")) {
 	console.log("Directory already exists! Aborting...");
 	return;
 } else {
 	console.log("Creating download directory...");
-	fs.mkdirSync("Calm Downloader");
-	process.chdir("Calm Downloader");
+	fs.mkdirSync("Calm");
+	process.chdir("Calm");
 };
 
 // Get scene database

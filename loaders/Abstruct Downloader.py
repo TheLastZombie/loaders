@@ -28,6 +28,7 @@ for b in a:
 		for f in range(len(e)):
 			print("Downloading " + e[f]["name"] + "...")
 			urllib.request.urlretrieve(e[f]["url_res5"] or e[f]["url_res4"] or e[f]["url_res3"] or e[f]["url_res2"] or e[f]["url_res1"], e[f]["name"] + os.path.splitext(urllib.parse.urlparse(e[f]["url_res5"] or e[f]["url_res4"] or e[f]["url_res3"] or e[f]["url_res2"] or e[f]["url_res1"]).path)[1])
+	print("")
 	print("Leaving directory...")
 	os.chdir("..")
 print("Finished downloading.")

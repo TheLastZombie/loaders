@@ -31,4 +31,5 @@ for b in a:
 	print("")
 	print("Leaving directory...")
 	os.chdir("..")
+print("")
 print("Finished downloading.")

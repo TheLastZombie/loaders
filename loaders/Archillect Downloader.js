@@ -20,7 +20,7 @@ axios("http://archillect.com/").then(response => {
 		console.log("Downloading " + (i + 1) + "/" + response.data.match(/<a class="post" href="\/\d+">/).toString().slice(23, -2) + " (" + (i + 1) + ")...");
 
 		// Download image file
-		var temp = exec("wget", ["-q", "http://archillect.com/" + (i + 1), "-O", "-"]).toString();
+		var temp = require("../tools/request")("http://archillect.com/" + (i + 1));
 		require("../tools/download")(temp.match(/<img id="ii" src=".+">/).toString().slice(18, -2));
 
 	};

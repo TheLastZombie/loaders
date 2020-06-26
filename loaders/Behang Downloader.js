@@ -14,26 +14,24 @@ require("../tools/directory")("Behang");
 // Get wallpaper list
 console.log("Getting wallpaper list...");
 console.log("");
-axios("https://knokfirst.com/behang_manifest.json").then(response => {
+const response = require("../tools/request")("https://knokfirst.com/behang_manifest.json", true);
 
-	// Do for each category
-	for (i = 0; i < response.data.wallpapers.category.length; i++) {
-		console.log("Downloading category " + (i + 1) + "/" + response.data.wallpapers.category.length + " (" + response.data.wallpapers.category[i].name + ")...");
+// Do for each category
+for (i = 0; i < response.wallpapers.category.length; i++) {
+	console.log("Downloading category " + (i + 1) + "/" + response.wallpapers.category.length + " (" + response.wallpapers.category[i].name + ")...");
 
-		// Create category folder
-		require("../tools/directory")(response.data.wallpapers.category[i].name);
+	// Create category folder
+	require("../tools/directory")(response.wallpapers.category[i].name);
 
-		// Do for each entry
-		for (j = 0; j < response.data.wallpapers.category[i].wallpaper.length; j++) {
+	// Do for each entry
+	for (j = 0; j < response.wallpapers.category[i].wallpaper.length; j++) {
 
-			// Download image file
-			console.log("Downloading image " + (j + 1) + "/" + response.data.wallpapers.category[i].wallpaper.length + " (" + response.data.wallpapers.category[i].wallpaper[j].name + ")...");
-			require("../tools/download")(response.data.wallpapers.category[i].wallpaper[j].url, response.data.wallpapers.category[i].wallpaper[j].name + path.parse(response.data.wallpapers.category[i].wallpaper[j].url).ext);
-
-		};
-
-		process.chdir("..");
+		// Download image file
+		console.log("Downloading image " + (j + 1) + "/" + response.wallpapers.category[i].wallpaper.length + " (" + response.wallpapers.category[i].wallpaper[j].name + ")...");
+		require("../tools/download")(response.wallpapers.category[i].wallpaper[j].url, response.wallpapers.category[i].wallpaper[j].name + path.parse(response.wallpapers.category[i].wallpaper[j].url).ext);
 
 	};
 
-});
+	process.chdir("..");
+
+};

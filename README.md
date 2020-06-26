@@ -4,20 +4,20 @@ Automatic downloaders for various webpages and applications.
 
 ## Requisites
 
-| | [Node.js](https://nodejs.org/) | [Python](https://www.python.org/) | [Wget](https://www.gnu.org/software/wget/) |
+| | [Node.js](https://nodejs.org/) | [Wget](https://www.gnu.org/software/wget/) |
 | :-: | :-: | :-: | :-: |
-| [Abstruct Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Abstruct%20Downloader.py) | | ✕ ([requests](https://requests.readthedocs.io/en/master/)) | |
-| [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Archillect%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Behang Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Behang%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Deezer Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Deezer%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios)) | | |
-| [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js) | ✕ ([inquirer](https://github.com/SBoudrias/Inquirer.js), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename), [sqlite3](https://github.com/mapbox/node-sqlite3)) | | ✕ |
-| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js) | ✕ ([adm-zip](https://github.com/cthackers/adm-zip), [axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
-| [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | | ✕ |
+| [Abstruct Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Abstruct%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Archillect%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Behang Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Behang%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Deezer Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Deezer%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios)) | |
+| [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js) | ✕ ([inquirer](https://github.com/SBoudrias/Inquirer.js), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename), [sqlite3](https://github.com/mapbox/node-sqlite3)) | ✕ |
+| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js) | ✕ ([adm-zip](https://github.com/cthackers/adm-zip), [axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 
 ## Installation
 
@@ -36,20 +36,12 @@ pip install -r requirements.txt
 ```
 Abstruct Downloader
 
-Importing modules...
-Creating directory...
-
+Importing dependencies...
 Loading categories...
-8 categories found.
 
-Creating BLEND directory...
-Loading amount of pages...
-4 pages found.
+Downloading category BLEND...
 
-Loading page 1...
-14 images found.
-
-Downloading Crystallization...
+Downloading image Leaving Hawkins - Eugene...
 ```
 
 </p>

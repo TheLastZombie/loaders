@@ -24,8 +24,7 @@ axios({
 	// Do for each scene
 	for (i = 0; i < globalModels.scenes.length; i++) {
 		process.stdout.write("Downloading " + (i + 1) + "/" + globalModels.scenes.length + " (" + globalModels.scenes[i].id + ").");
-		fs.mkdirSync(require("../tools/sanitize")(globalModels.scenes[i].title));
-		process.chdir(require("../tools/sanitize")(globalModels.scenes[i].title));
+		require("../tools/directory")(globalModels.scenes[i].title);
 
 		// Download audio
 		if (globalModels.scenes[i].audio) {

@@ -21,8 +21,7 @@ axios("https://knokfirst.com/behang_manifest.json").then(response => {
 		console.log("Downloading category " + (i + 1) + "/" + response.data.wallpapers.category.length + " (" + response.data.wallpapers.category[i].name + ")...");
 
 		// Create category folder
-		fs.mkdirSync(response.data.wallpapers.category[i].name);
-		process.chdir(response.data.wallpapers.category[i].name);
+		require("../tools/directory")(response.data.wallpapers.category[i].name);
 
 		// Do for each entry
 		for (j = 0; j < response.data.wallpapers.category[i].wallpaper.length; j++) {

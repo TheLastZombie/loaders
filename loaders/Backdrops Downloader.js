@@ -21,8 +21,7 @@ axios("https://backdrops.io/walls/api_v3.2.php?task=all_walls").then(response =>
 		console.log("Downloading " + (i + 1) + "/" + response.data.wallList.length + " (" + response.data.wallList[i].wallId + ")...");
 
 		// Create category folder
-		if (!fs.existsSync(response.data.wallList[i].category)) fs.mkdirSync(response.data.wallList[i].category);
-		process.chdir(response.data.wallList[i].category);
+		require("../tools/directory")(response.data.wallList[i].category, true);
 
 		// Download image file
 		require("../tools/download")("https://backdrops.io/walls/upload/" + response.data.wallList[i].url, response.data.wallList[i].name + path.parse(response.data.wallList[i].url).ext);

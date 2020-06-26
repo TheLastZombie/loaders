@@ -20,8 +20,7 @@ axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(respo
 	// Do for each heritage
 	for (i = 0; i < a_clock_heritage_data.length; i++) {
 		process.stdout.write("Downloading " + (i + 1) + "/" + a_clock_heritage_data.length + " (" + a_clock_heritage_data[i].id + ").");
-		fs.mkdirSync(require("../tools/sanitize")(a_clock_heritage_data[i].name.en));
-		process.chdir(require("../tools/sanitize")(a_clock_heritage_data[i].name.en));
+		require("../tools/directory")(a_clock_heritage_data[i].name.en);
 		const resolutions = ["3840_2160", "1920_1200", "1920_1080", "1280_1024"];
 
 		// Download music

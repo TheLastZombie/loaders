@@ -11,14 +11,7 @@ const path = require("path");
 const sanitize = require("sanitize-filename");
 
 // Create directory
-if (fs.existsSync("Behang")) {
-	console.log("Directory already exists! Aborting...");
-	return;
-} else {
-	console.log("Creating download directory...");
-	fs.mkdirSync("Behang");
-	process.chdir("Behang");
-};
+require("../tools/directory")("Behang");
 
 // Get wallpaper list
 console.log("Getting wallpaper list...");

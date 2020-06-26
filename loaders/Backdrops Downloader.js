@@ -11,14 +11,7 @@ const path = require("path");
 const sanitize = require("sanitize-filename");
 
 // Create directory
-if (fs.existsSync("Backdrops")) {
-	console.log("Directory already exists! Aborting...");
-	return;
-} else {
-	console.log("Creating download directory...");
-	fs.mkdirSync("Backdrops");
-	process.chdir("Backdrops");
-};
+require("../tools/directory")("Backdrops");
 
 // Get wallpaper list
 console.log("Getting wallpaper list...");

@@ -4,19 +4,11 @@ console.log("");
 
 // Import dependencies
 console.log("Importing dependencies...");
-const fs = require("fs");
 const inquirer = require("inquirer");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Earth View")) {
-	console.log("Directory already exists! Aborting...");
-	return;
-} else {
-	console.log("Creating download directory...");
-	fs.mkdirSync("Earth View");
-	process.chdir("Earth View");
-};
+require("../tools/directory")("Earth View");
 
 // Ask for host
 console.log("");

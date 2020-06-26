@@ -4,19 +4,11 @@ console.log("");
 
 // Import dependencies
 console.log("Importing dependencies...");
-const fs = require("fs");
 const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Discord Emoji")) {
-	console.log("Directory already exists! Aborting...");
-	return;
-} else {
-	console.log("Creating download directory...");
-	fs.mkdirSync("Discord Emoji");
-	process.chdir("Discord Emoji");
-};
+require("../tools/directory")("Discord Emoji");
 
 // Get emoji database
 console.log("Retrieving emoji database...");

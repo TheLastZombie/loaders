@@ -4,19 +4,11 @@ console.log("");
 
 // Import dependencies
 console.log("Importing dependencies...");
-const fs = require("fs");
 const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Archillect")) {
-	console.log("Directory already exists! Aborting...");
-	return;
-} else {
-	console.log("Creating download directory...");
-	fs.mkdirSync("Archillect");
-	process.chdir("Archillect");
-};
+require("../tools/directory")("Archillect");
 
 // Get latest image ID
 console.log("Retrieving latest image ID...");

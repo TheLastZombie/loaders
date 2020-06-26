@@ -9,14 +9,7 @@ const sqlite3 = require("sqlite3").verbose();
 const exec = require("child_process").execFileSync;
 
 // Create directory
-if (fs.existsSync("Facets")) {
-	console.log("Directory already exists! Aborting...");
-	return;
-} else {
-	console.log("Creating download directory...");
-	fs.mkdirSync("Facets");
-	process.chdir("Facets");
-};
+require("../tools/directory")("Facets");
 
 // Check if facets.db exists
 if (!fs.existsSync("../../facets.db")) {

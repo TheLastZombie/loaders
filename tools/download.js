@@ -11,7 +11,6 @@ module.exports = function (url, file = require("path").basename(url), dir = ".")
 		execFileSync("wget", [url, "-O", file, "-P", dir, "-q"]);
 	} catch (e) {
 		console.log("wget error, skipping download.");
-		fs.unlinkSync(path.resolve(dir, file));
 	};
 
 };

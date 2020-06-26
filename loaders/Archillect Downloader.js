@@ -4,7 +4,6 @@ console.log("");
 
 // Import dependencies
 console.log("Importing dependencies...");
-const axios = require("axios");
 const exec = require("child_process").execFileSync;
 
 // Create directory

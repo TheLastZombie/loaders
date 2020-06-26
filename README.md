@@ -15,8 +15,8 @@ Automatic downloaders for various webpages and applications.
 | [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js) | ✕ ([inquirer](https://github.com/SBoudrias/Inquirer.js), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename), [sqlite3](https://github.com/mapbox/node-sqlite3)) | ✕ |
-| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js) | ✕ ([adm-zip](https://github.com/cthackers/adm-zip), [axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
-| [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js) | ✕ ([adm-zip](https://github.com/cthackers/adm-zip), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 
 ## Installation

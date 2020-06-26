@@ -4,8 +4,6 @@ console.log("");
 
 // Import dependencies
 console.log("Importing dependencies...");
-const fs = require("fs");
-const axios = require("axios");
 const path = require("path");
 
 // Create directory

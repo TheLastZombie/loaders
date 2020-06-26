@@ -6,7 +6,6 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const sanitize = require("sanitize-filename");
 const AdmZip = require("adm-zip");
 
 // Create directory
@@ -21,12 +20,8 @@ axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(respo
 	// Do for each heritage
 	for (i = 0; i < a_clock_heritage_data.length; i++) {
 		process.stdout.write("Downloading " + (i + 1) + "/" + a_clock_heritage_data.length + " (" + a_clock_heritage_data[i].id + ").");
-		fs.mkdirSync(sanitize(a_clock_heritage_data[i].name.en, {
-			replacement: "_"
-		}));
-		process.chdir(sanitize(a_clock_heritage_data[i].name.en, {
-			replacement: "_"
-		}));
+		fs.mkdirSync(require("../tools/sanitize")(a_clock_heritage_data[i].name.en));
+		process.chdir(require("../tools/sanitize")(a_clock_heritage_data[i].name.en));
 
 		// Download music
 		if (a_clock_heritage_data[i].music) {

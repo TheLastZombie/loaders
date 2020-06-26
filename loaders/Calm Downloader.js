@@ -6,7 +6,6 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const sanitize = require("sanitize-filename");
 
 // Create directory
 require("../tools/directory")("Calm");
@@ -25,12 +24,8 @@ axios({
 	// Do for each scene
 	for (i = 0; i < globalModels.scenes.length; i++) {
 		process.stdout.write("Downloading " + (i + 1) + "/" + globalModels.scenes.length + " (" + globalModels.scenes[i].id + ").");
-		fs.mkdirSync(sanitize(globalModels.scenes[i].title, {
-			replacement: "_"
-		}));
-		process.chdir(sanitize(globalModels.scenes[i].title, {
-			replacement: "_"
-		}));
+		fs.mkdirSync(require("../tools/sanitize")(globalModels.scenes[i].title));
+		process.chdir(require("../tools/sanitize")(globalModels.scenes[i].title));
 
 		// Download audio
 		if (globalModels.scenes[i].audio) {

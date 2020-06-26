@@ -5,7 +5,7 @@ Automatic downloaders for various webpages and applications.
 ## Requisites
 
 | | [Node.js](https://nodejs.org/) | [Wget](https://www.gnu.org/software/wget/) |
-| :-: | :-: | :-: | :-: |
+| :-: | :-: | :-: |
 | [Abstruct Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Abstruct%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Archillect%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |

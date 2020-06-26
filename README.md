@@ -25,7 +25,6 @@ Automatic downloaders for various webpages and applications.
 git clone https://github.com/TheLastZombie/loaders
 cd loaders
 npm install
-pip install -r requirements.txt
 ```
 
 ## Loaders

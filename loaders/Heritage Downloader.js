@@ -22,6 +22,7 @@ axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(respo
 		process.stdout.write("Downloading " + (i + 1) + "/" + a_clock_heritage_data.length + " (" + a_clock_heritage_data[i].id + ").");
 		fs.mkdirSync(require("../tools/sanitize")(a_clock_heritage_data[i].name.en));
 		process.chdir(require("../tools/sanitize")(a_clock_heritage_data[i].name.en));
+		const resolutions = ["3840_2160", "1920_1200", "1920_1080", "1280_1024"];
 
 		// Download music
 		if (a_clock_heritage_data[i].music) {
@@ -37,42 +38,22 @@ axios("https://www.sony.net/united/clock/assets/js/heritage_data.js").then(respo
 
 		// Download photos
 		for (j = 0; j < 12; j++) {
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/3840_2160/fp/" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_3840_2160_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1200/fp/" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1200_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1080/fp/" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1080_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1280_1024/fp/" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1280_1024_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
+			resolutions.forEach(x => {
+				require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/" + x + "/fp/" + a_clock_heritage_data[i].id + "_" + x + "_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
+				new AdmZip("./" + a_clock_heritage_data[i].id + "_" + x + "_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+				fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_" + x + "_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
+				process.stdout.write(".");
+			});
 		};
 
 		// Download snapshots
 		for (j = 0; j < 10; j++) {
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/3840_2160/ss/" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_3840_2160_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1200/ss/" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1200_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1920_1080/ss/" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1920_1080_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
-			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/1280_1024/ss/" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_1280_1024_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			process.stdout.write(".");
+			resolutions.forEach(x => {
+				require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/" + x + "/ss/" + a_clock_heritage_data[i].id + "_" + x + "_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
+				new AdmZip("./" + a_clock_heritage_data[i].id + "_" + x + "_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
+				fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_" + x + "_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
+				process.stdout.write(".");
+			});
 		};
 
 		// Return and flush

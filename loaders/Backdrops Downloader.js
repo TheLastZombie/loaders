@@ -6,9 +6,7 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const exec = require("child_process").execFileSync;
 const path = require("path");
-const sanitize = require("sanitize-filename");
 
 // Create directory
 require("../tools/directory")("Backdrops");
@@ -27,9 +25,7 @@ axios("https://backdrops.io/walls/api_v3.2.php?task=all_walls").then(response =>
 		process.chdir(response.data.wallList[i].category);
 
 		// Download image file
-		exec("wget", ["-q", "https://backdrops.io/walls/upload/" + response.data.wallList[i].url, "-O", sanitize(response.data.wallList[i].name, {
-			replacement: "_"
-		}) + path.parse(response.data.wallList[i].url).ext]);
+		require("../tools/download")("https://backdrops.io/walls/upload/" + response.data.wallList[i].url, response.data.wallList[i].name + path.parse(response.data.wallList[i].url).ext);
 		process.chdir("..");
 
 	};

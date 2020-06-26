@@ -5,7 +5,6 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const axios = require("axios");
-const exec = require("child_process").execFileSync;
 
 // Create directory
 require("../tools/directory")("Discord Emoji");
@@ -20,7 +19,7 @@ axios("https://discordemoji.com/api").then(response => {
 		console.log("Downloading " + (i + 1) + "/" + response.data.length + " (" + response.data[i].id + ")...");
 
 		// Download emoji file
-		exec("wget", ["-q", response.data[i].image]);
+		require("../tools/download")(response.data[i].image);
 
 	};
 

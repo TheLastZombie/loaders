@@ -4,11 +4,8 @@ console.log("");
 
 // Import dependencies
 console.log("Importing dependencies...");
-const fs = require("fs");
 const axios = require("axios");
-const exec = require("child_process").execFileSync;
 const path = require("path");
-const sanitize = require("sanitize-filename");
 
 // Create directory
 require("../tools/directory")("Wallpaperboard");
@@ -23,16 +20,7 @@ axios("https://raw.githubusercontent.com/danimahardhika/wallpaperboard/master/js
 		console.log("Downloading " + (i + 1) + "/" + response.data.Wallpapers.length + " (" + response.data.Wallpapers[i].name + ")...");
 
 		// Download image file
-		try {
-			exec("wget", ["-q", response.data.Wallpapers[i].url, "-O", sanitize(response.data.Wallpapers[i].name, {
-				replacement: "_"
-			}) + path.parse(response.data.Wallpapers[i].url).ext]);
-		} catch(e) {
-			console.log("wget error, skipping download.");
-			fs.unlinkSync(sanitize(response.data.Wallpapers[i].name, {
-				replacement: "_"
-			}) + path.parse(response.data.Wallpapers[i].url).ext);
-		};
+		require("../tools/download")(response.data.Wallpapers[i].url, response.data.Wallpapers[i].name + path.parse(response.data.Wallpapers[i].url).ext);
 
 	};
 

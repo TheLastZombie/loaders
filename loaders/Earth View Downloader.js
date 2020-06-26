@@ -5,7 +5,6 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const inquirer = require("inquirer");
-const exec = require("child_process").execFileSync;
 
 // Create directory
 require("../tools/directory")("Earth View");
@@ -29,8 +28,8 @@ inquirer.prompt([{
 
 		// Download image file
 		try {
-			if (answers.host == "www.gstatic.com (lower resolution)")     exec("wget", ["-q", "https://www.gstatic.com/prettyearth/assets/full/" + i + ".jpg"]);
-			if (answers.host == "earthview.withgoogle.com (watermarked)") exec("wget", ["-q", "https://earthview.withgoogle.com/download/"       + i + ".jpg"]);
+			if (answers.host == "www.gstatic.com (lower resolution)")     require("../tools/download")("https://www.gstatic.com/prettyearth/assets/full/" + i + ".jpg");
+			if (answers.host == "earthview.withgoogle.com (watermarked)") require("../tools/download")("https://earthview.withgoogle.com/download/"       + i + ".jpg");
 		} catch (e) {};
 
 	};

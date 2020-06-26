@@ -6,9 +6,7 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const exec = require("child_process").execFileSync;
 const path = require("path");
-const sanitize = require("sanitize-filename");
 
 // Create directory
 require("../tools/directory")("Behang");
@@ -31,9 +29,7 @@ axios("https://knokfirst.com/behang_manifest.json").then(response => {
 
 			// Download image file
 			console.log("Downloading image " + (j + 1) + "/" + response.data.wallpapers.category[i].wallpaper.length + " (" + response.data.wallpapers.category[i].wallpaper[j].name + ")...");
-			exec("wget", ["-q", response.data.wallpapers.category[i].wallpaper[j].url, "-O", sanitize(response.data.wallpapers.category[i].wallpaper[j].name, {
-				replacement: "_"
-			}) + path.parse(response.data.wallpapers.category[i].wallpaper[j].url).ext]);
+			require("../tools/download")(response.data.wallpapers.category[i].wallpaper[j].url, response.data.wallpapers.category[i].wallpaper[j].name + path.parse(response.data.wallpapers.category[i].wallpaper[j].url).ext);
 
 		};
 

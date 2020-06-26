@@ -6,7 +6,6 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const sqlite3 = require("sqlite3").verbose();
-const exec = require("child_process").execFileSync;
 
 // Create directory
 require("../tools/directory")("Facets");
@@ -31,9 +30,9 @@ console.log("");
 db.all("SELECT * FROM jm_facets", function (err, rows) {
 	for (i = 0; i < rows.length; i++) {
 		console.log("Downloading " + (i + 1) + "/" + rows.length + " (" + rows[i].title + ")...");
-		if (rows[i].thumbnail) exec("wget", ["-q", "http://www.facets.la/thumbnail/" + rows[i].thumbnail, "-P", "Facets 365/Thumbnail"]);
-		if (rows[i].fullview) exec("wget", ["-q", "http://www.facets.la/fullview/" + rows[i].fullview, "-P", "Facets 365/Full View"]);
-		if (rows[i].wallpaper) exec("wget", ["-q", "http://www.facets.la/wallpaper/" + rows[i].wallpaper, "-P", "Facets 365/Wallpaper"]);
+		if (rows[i].thumbnail) require("../tools/download")("http://www.facets.la/thumbnail/" + rows[i].thumbnail, undefined, "Facets 365/Thumbnail");
+		if (rows[i].fullview)  require("../tools/download")("http://www.facets.la/fullview/"  + rows[i].fullview,  undefined, "Facets 365/Full View");
+		if (rows[i].wallpaper) require("../tools/download")("http://www.facets.la/wallpaper/" + rows[i].wallpaper, undefined, "Facets 365/Wallpaper");
 	};
 	console.log("");
 
@@ -43,8 +42,8 @@ db.all("SELECT * FROM jm_facets", function (err, rows) {
 	db.all("SELECT * FROM jm_facets_update", function (err, rows) {
 		for (i = 0; i < rows.length; i++) {
 			console.log("Downloading " + (i + 1) + "/" + rows.length + " (" + rows[i].title + ")...");
-			exec("wget", ["-q", "http://dsn28cf3a7751.cloudfront.net/update_thumbs/" + rows[i].title.replace(/ /g, "-").toLowerCase() + ".jpg", "-P", "Premium Facets/Thumbnail"]);
-			exec("wget", ["-q", "http://dsn28cf3a7751.cloudfront.net/update/" + rows[i].title.replace(/ /g, "-").toLowerCase() + ".jpg", "-P", "Premium Facets/Default"]);
+			require("../tools/download")("http://dsn28cf3a7751.cloudfront.net/update_thumbs/" + rows[i].title.replace(/ /g, "-").toLowerCase() + ".jpg", undefined, "Premium Facets/Thumbnail");
+			require("../tools/download")("http://dsn28cf3a7751.cloudfront.net/update/"        + rows[i].title.replace(/ /g, "-").toLowerCase() + ".jpg", undefined, "Premium Facets/Default");
 		};
 	});
 

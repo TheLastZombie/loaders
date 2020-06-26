@@ -7,7 +7,6 @@ console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
 const sanitize = require("sanitize-filename");
-const exec = require("child_process").execFileSync;
 
 // Create directory
 require("../tools/directory")("Calm");
@@ -35,19 +34,19 @@ axios({
 
 		// Download audio
 		if (globalModels.scenes[i].audio) {
-			exec("wget", ["-q", globalModels.scenes[i].audio.url]);
+			require("../tools/download")(globalModels.scenes[i].audio.url);
 			process.stdout.write(".");
 		};
 
 		// Download video
 		if (globalModels.scenes[i].video) {
-			exec("wget", ["-q", globalModels.scenes[i].video.url]);
+			require("../tools/download")(globalModels.scenes[i].video.url);
 			process.stdout.write(".");
 		};
 
 		// Download image
 		if (globalModels.scenes[i].image) {
-			exec("wget", ["-q", globalModels.scenes[i].image.url]);
+			require("../tools/download")(globalModels.scenes[i].image.url);
 			process.stdout.write(".");
 		};
 

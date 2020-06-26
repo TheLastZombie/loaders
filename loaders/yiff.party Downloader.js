@@ -6,7 +6,6 @@ console.log("");
 console.log("Importing dependencies...");
 const fs = require("fs");
 const axios = require("axios");
-const exec = require("child_process").execFileSync;
 
 // Create directory
 require("../tools/directory")("yiff.party");
@@ -22,6 +21,6 @@ axios("https://yiff.party/json/creators.json").then(response => {
 		console.log("Downloading " + (i + 1) + "/" + response.data.creators.length + " (" + response.data.creators[i].id + ")...");
 
 		// Download creator file
-		exec("wget", ["-q", "https://yiff.party/" + response.data.creators[i].id + ".json"]);
+		require("../tools/download")("https://yiff.party/" + response.data.creators[i].id + ".json");
 	};
 });

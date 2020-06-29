@@ -11,7 +11,6 @@ Automatic downloaders for various webpages and applications.
 | [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js) | ✕ | ✕ |
 | [Behang Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Behang%20Downloader.js) | ✕ | ✕ |
 | [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js) | ✕ | ✕ |
-| [Deezer Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Deezer%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios)) | |
 | [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js) | ✕ ([inquirer](https://github.com/SBoudrias/Inquirer.js)) | ✕ |
 | [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js) | ✕ | ✕ |
 | [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js) | ✕ ([sqlite3](https://github.com/mapbox/node-sqlite3)) | ✕ |

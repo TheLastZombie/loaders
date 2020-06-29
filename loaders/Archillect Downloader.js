@@ -2,10 +2,6 @@
 console.log("Archillect Downloader");
 console.log("");
 
-// Import dependencies
-console.log("Importing dependencies...");
-const exec = require("child_process").execFileSync;
-
 // Create directory
 require("../tools/directory")("Archillect");
 

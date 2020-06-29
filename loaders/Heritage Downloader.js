@@ -5,7 +5,6 @@ console.log("");
 // Import dependencies
 console.log("Importing dependencies...");
 const fs = require("fs");
-const AdmZip = require("adm-zip");
 
 // Create directory
 require("../tools/directory")("α CLOCK");
@@ -39,8 +38,6 @@ for (i = 0; i < a_clock_heritage_data.length; i++) {
 	for (j = 0; j < 12; j++) {
 		resolutions.forEach(x => {
 			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/" + x + "/fp/" + a_clock_heritage_data[i].id + "_" + x + "_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_" + x + "_fp_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_" + x + "_fp_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
 		});
 	};
@@ -49,8 +46,6 @@ for (i = 0; i < a_clock_heritage_data.length; i++) {
 	for (j = 0; j < 10; j++) {
 		resolutions.forEach(x => {
 			require("../tools/download")("https://di.update.sony.net/ACLK/wallpaper/" + a_clock_heritage_data[i].id + "/" + x + "/ss/" + a_clock_heritage_data[i].id + "_" + x + "_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
-			new AdmZip("./" + a_clock_heritage_data[i].id + "_" + x + "_ss_" + (j + 1).toString().padStart(2, "0") + ".zip").extractAllTo(process.cwd(), true);
-			fs.unlinkSync("./" + a_clock_heritage_data[i].id + "_" + x + "_ss_" + (j + 1).toString().padStart(2, "0") + ".zip");
 			process.stdout.write(".");
 		});
 	};

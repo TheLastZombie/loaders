@@ -14,7 +14,7 @@ Automatic downloaders for various webpages and applications.
 | [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js) | ✕ ([inquirer](https://github.com/SBoudrias/Inquirer.js)) | ✕ |
 | [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js) | ✕ | ✕ |
 | [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js) | ✕ ([sqlite3](https://github.com/mapbox/node-sqlite3)) | ✕ |
-| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js) | ✕ ([adm-zip](https://github.com/cthackers/adm-zip)) | ✕ |
+| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js) | ✕ | ✕ |
 | [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕ | ✕ |
 | [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js) | ✕ | ✕ |
 

@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "adm-zip": "^0.4.16",
     "inquirer": "^7.2.0",
     "sqlite3": "^4.2.0"
   }

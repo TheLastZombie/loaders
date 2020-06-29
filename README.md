@@ -10,7 +10,7 @@ Automatic downloaders for various webpages and applications.
 | [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Archillect%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Behang Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Behang%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
-| [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
+| [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Deezer Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Deezer%20Downloader.js) | ✕ ([axios](https://github.com/axios/axios)) | |
 | [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js) | ✕ ([inquirer](https://github.com/SBoudrias/Inquirer.js), [sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
 | [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js) | ✕ ([sanitize-filename](https://github.com/parshap/node-sanitize-filename)) | ✕ |
@@ -100,7 +100,6 @@ Downloading image 1/8 (Colorgasm1)...
 ```
 Calm Downloader
 
-Importing dependencies...
 Creating download directory...
 Retrieving scene database...
 

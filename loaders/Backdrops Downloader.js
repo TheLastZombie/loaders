@@ -2,10 +2,6 @@
 console.log("Backdrops Downloader");
 console.log("");
 
-// Import dependencies
-console.log("Importing dependencies...");
-const path = require("path");
-
 // Create directory
 require("../tools/directory")("Backdrops");
 
@@ -22,7 +18,7 @@ for (i = 0; i < response.wallList.length; i++) {
 	require("../tools/directory")(response.wallList[i].category, true);
 
 	// Download image file
-	require("../tools/download")("https://backdrops.io/walls/upload/" + response.wallList[i].url, response.wallList[i].name + path.parse(response.wallList[i].url).ext);
+	require("../tools/download")("https://backdrops.io/walls/upload/" + response.wallList[i].url, response.wallList[i].name + require("../tools/extension")(response.wallList[i].url));
 	process.chdir("..");
 
 };

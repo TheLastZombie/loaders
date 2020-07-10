@@ -2,10 +2,6 @@
 console.log("Abstruct Downloader");
 console.log("");
 
-// Import dependencies
-console.log("Importing dependencies...");
-const path = require("path");
-
 // Create directory
 require("../tools/directory")("Abstruct");
 
@@ -33,7 +29,7 @@ categories.forEach(element => {
 		data.forEach(image => {
 			console.log("Downloading image " + image.name + "...");
 			const download = image.url_res5 || image.url_res4 || image.url_res3 || image.url_res2 || image.url_res1 || image.url_thumb;
-			require("../tools/download")(download, image.name + path.parse(download).ext);
+			require("../tools/download")(download, image.name + require("../tools/extension")(download));
 		});
 
 	};

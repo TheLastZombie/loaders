@@ -2,10 +2,6 @@
 console.log("Behang Downloader");
 console.log("");
 
-// Import dependencies
-console.log("Importing dependencies...");
-const path = require("path");
-
 // Create directory
 require("../tools/directory")("Behang");
 
@@ -26,7 +22,7 @@ for (i = 0; i < response.wallpapers.category.length; i++) {
 
 		// Download image file
 		console.log("Downloading image " + (j + 1) + "/" + response.wallpapers.category[i].wallpaper.length + " (" + response.wallpapers.category[i].wallpaper[j].name + ")...");
-		require("../tools/download")(response.wallpapers.category[i].wallpaper[j].url, response.wallpapers.category[i].wallpaper[j].name + path.parse(response.wallpapers.category[i].wallpaper[j].url).ext);
+		require("../tools/download")(response.wallpapers.category[i].wallpaper[j].url, response.wallpapers.category[i].wallpaper[j].name + require("../tools/extension")(response.wallpapers.category[i].wallpaper[j].url));
 
 	};
 

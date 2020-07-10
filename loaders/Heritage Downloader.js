@@ -2,10 +2,6 @@
 console.log("Heritage Downloader");
 console.log("");
 
-// Import dependencies
-console.log("Importing dependencies...");
-const fs = require("fs");
-
 // Create directory
 require("../tools/directory")("α CLOCK");
 

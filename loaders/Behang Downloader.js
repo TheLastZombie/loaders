@@ -13,6 +13,7 @@ const response = require("../tools/request")("https://knokfirst.com/behang_manif
 // Do for each category
 for (i = 0; i < response.wallpapers.category.length; i++) {
 	console.log("Downloading category " + (i + 1) + "/" + response.wallpapers.category.length + " (" + response.wallpapers.category[i].name + ")...");
+	console.log("");
 
 	// Create category folder
 	require("../tools/directory")(response.wallpapers.category[i].name);

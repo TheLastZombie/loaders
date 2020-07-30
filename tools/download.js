@@ -1,5 +1,3 @@
-const { fstat } = require("fs");
-
 module.exports = function (url, file = require("path").basename(url), dir = ".", args = []) {
 
 	const path = require("path");

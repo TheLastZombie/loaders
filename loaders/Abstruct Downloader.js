@@ -7,7 +7,8 @@ require("../tools/directory")("Abstruct");
 
 // Loading categories
 console.log("Loading categories...");
-const categories = require("../tools/request")("http://api.abstruct.co/api/packs", true).data;
+const response = require("../tools/request")("http://api.abstruct.co/api/packs", true);
+const categories = response.data;
 
 // Do for each category
 categories.forEach(element => {

@@ -9,6 +9,7 @@ require("../tools/directory")("Behang");
 console.log("Getting wallpaper list...");
 console.log("");
 const response = require("../tools/request")("https://knokfirst.com/behang_manifest.json", true);
+require("fs").writeFileSync("behang_manifest.json", JSON.stringify(response));
 
 // Do for each category
 for (i = 0; i < response.wallpapers.category.length; i++) {

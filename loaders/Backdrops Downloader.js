@@ -9,6 +9,7 @@ require("../tools/directory")("Backdrops");
 console.log("Getting wallpaper list...");
 console.log("");
 const response = require("../tools/request")("https://backdrops.io/walls/api_v3.2.php?task=all_walls", true);
+require("fs").writeFileSync("api_v3.2.php", JSON.stringify(response));
 
 // Do for each entry
 for (i = 0; i < response.wallList.length; i++) {

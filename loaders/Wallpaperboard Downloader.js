@@ -9,6 +9,7 @@ require("../tools/directory")("Wallpaperboard");
 console.log("Getting wallpaper list...");
 console.log("");
 const response = require("../tools/request")("https://raw.githubusercontent.com/danimahardhika/wallpaperboard/master/json%20example/wallpaper_sample.json", true);
+require("fs").writeFileSync("wallpaper_sample.json", JSON.stringify(response));
 
 // Do for each entry
 for (i = 0; i < response.Wallpapers.length; i++) {

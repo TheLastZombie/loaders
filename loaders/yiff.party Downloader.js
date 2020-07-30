@@ -2,10 +2,6 @@
 console.log("yiff.party Downloader");
 console.log("");
 
-// Import dependencies
-console.log("Importing dependencies...");
-const fs = require("fs");
-
 // Create directory
 require("../tools/directory")("yiff.party");
 
@@ -13,7 +9,7 @@ require("../tools/directory")("yiff.party");
 console.log("Retrieving creator database...");
 console.log("");
 const response = require("../tools/request")("https://yiff.party/json/creators.json", true);
-fs.writeFileSync("creators.json", JSON.stringify(response));
+require("fs").writeFileSync("creators.json", JSON.stringify(response));
 
 // Do for each creator
 for (i = 0; i < response.creators.length; i++) {

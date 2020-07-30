@@ -8,6 +8,7 @@ require("../tools/directory")("Abstruct");
 // Loading categories
 console.log("Loading categories...");
 const response = require("../tools/request")("http://api.abstruct.co/api/packs", true);
+require("fs").writeFileSync("packs", JSON.stringify(response));
 const categories = response.data;
 
 // Do for each category
@@ -24,7 +25,9 @@ categories.forEach(element => {
 	for (i = 1; i <= pages; i++) {
 
 		// Get list of wallpapers
-		const data = require("../tools/request")("http://api.abstruct.co/api/packs/" + element.id + "/wallpapers?page=" + i, true).data;
+		const response = require("../tools/request")("http://api.abstruct.co/api/packs/" + element.id + "/wallpapers?page=" + i, true);
+		require("fs").writeFileSync("wallpapers_page=" + i, JSON.stringify(response));
+		const data = response.data;
 
 		// Download wallpapers
 		data.forEach(image => {

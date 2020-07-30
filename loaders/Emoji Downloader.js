@@ -9,6 +9,7 @@ require("../tools/directory")("Discord Emoji");
 console.log("Retrieving emoji database...");
 console.log("");
 const response = require("../tools/request")("https://discordemoji.com/api", true);
+require("fs").writeFileSync("api", JSON.stringify(response));
 
 // Do for each emoji
 for (i = 0; i < response.length; i++) {

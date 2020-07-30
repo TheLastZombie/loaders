@@ -9,6 +9,7 @@ require("../tools/directory")("α CLOCK");
 console.log("Retrieving heritage database...");
 console.log("");
 const response = require("../tools/request")("https://www.sony.net/united/clock/assets/js/heritage_data.js");
+require("fs").writeFileSync("heritage_data.js", response);
 
 eval(response);
 

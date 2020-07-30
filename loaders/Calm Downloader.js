@@ -11,6 +11,7 @@ console.log("");
 const response = require("../tools/request")("https://api.app.aws-prod.useast1.calm.com/scenes", true, [
 	"--header=x-device-platform: www"
 ]);
+require("fs").writeFileSync("scenes", JSON.stringify(response));
 
 // Do for each scene
 for (i = 0; i < reponse.scenes.length; i++) {

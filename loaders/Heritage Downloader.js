@@ -5,7 +5,7 @@ console.log('Heritage Downloader')
 console.log('')
 
 // Create directory
-require('../tools/directory')('α CLOCK')
+require('../tools/directory')('a CLOCK')
 
 // Get heritage database
 console.log('Retrieving heritage database...')

@@ -1,7 +1,5 @@
-module.exports = function (file = "") {
+module.exports = function (file = '') {
+  const path = require('path')
 
-	const path = require("path");
-
-	return path.parse(file).ext;
-
-};
+  return path.parse(file).ext
+}

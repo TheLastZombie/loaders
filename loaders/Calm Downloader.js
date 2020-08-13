@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 // Show header
 console.log('Calm Downloader')
 console.log('')
@@ -16,25 +14,25 @@ const response = require('../tools/request')('https://api.app.aws-prod.useast1.c
 require('fs').writeFileSync('scenes', JSON.stringify(response))
 
 // Do for each scene
-for (let i = 0; i < reponse.scenes.length; i++) {
-  process.stdout.write('Downloading ' + (i + 1) + '/' + reponse.scenes.length + ' (' + reponse.scenes[i].id + ').')
-  require('../tools/directory')(reponse.scenes[i].title)
+for (let i = 0; i < response.scenes.length; i++) {
+  process.stdout.write('Downloading ' + (i + 1) + '/' + response.scenes.length + ' (' + response.scenes[i].id + ').')
+  require('../tools/directory')(response.scenes[i].title)
 
   // Download audio
-  if (reponse.scenes[i].audio) {
-    require('../tools/download')(reponse.scenes[i].audio.url)
+  if (response.scenes[i].audio) {
+    require('../tools/download')(response.scenes[i].audio.url)
     process.stdout.write('.')
   }
 
   // Download video
-  if (reponse.scenes[i].video) {
-    require('../tools/download')(reponse.scenes[i].video.url)
+  if (response.scenes[i].video) {
+    require('../tools/download')(response.scenes[i].video.url)
     process.stdout.write('.')
   }
 
   // Download image
-  if (reponse.scenes[i].image) {
-    require('../tools/download')(reponse.scenes[i].image.url)
+  if (response.scenes[i].image) {
+    require('../tools/download')(response.scenes[i].image.url)
     process.stdout.write('.')
   }
 

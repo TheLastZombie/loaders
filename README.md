@@ -16,6 +16,7 @@ Automatic downloaders for various webpages and applications.
 | [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js)                 | ✕                              | ✕                                                      | ✕                                          |
 | [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js)             | ✕                              |                                                        | ✕                                          |
 | [IKEA Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/IKEA%20Downloader.js)                     | ✕                              |                                                        | ✕                                          |
+| [Snoovatar Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Snoovatar%20Downloader.js)           | ✕                              |                                                        | ✕                                          |
 | [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕                              |                                                        | ✕                                          |
 | [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js)         | ✕                              |                                                        | ✕                                          |
 
@@ -40,5 +41,6 @@ npm install
 | Facets Downloader         | Downloads all <a href="http://www.facets.la/">Facets</a> images in all available resolutions via the app's facets.db.                                   |
 | Heritage Downloader       | Downloads photos, snapshots, music tracks and soundscapes for every heritage from the <a href="https://www.sony.net/united/clock/">α CLOCK</a> project. |
 | IKEA Downloader           | Downloads all IKEA catalogues from the <a href="https://ikeamuseum.com/">IKEA Museum</a> website.                                                       |
+| Snoovatar Downloader      | Downloads all assets from Reddit's new <a href="https://snoovatar.reddit.com/static/client/">Snoo avatar builder</a>.                                   |
 | Wallpaperboard Downloader | Downloads all wallpapers from a <a href="https://github.com/danimahardhika/wallpaperboard">Wallpaperboard</a> source.                                   |
 | yiff.party Downloader     | Downloads the creators and all artist-specific JSON files from <a href="https://yiff.party/">yiff.party</a>.                                            |

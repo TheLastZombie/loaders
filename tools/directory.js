@@ -10,7 +10,9 @@ module.exports = function (name, silent) {
       throw Error('Directory "' + name + '" already exists!')
     }
   } else {
-    fs.mkdirSync(name)
+    fs.mkdirSync(name, {
+      recursive: true
+    })
     process.chdir(name)
   }
 }

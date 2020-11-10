@@ -1,4 +1,4 @@
-/* eslint-disable handle-callback-err */
+/* eslint-disable node/handle-callback-err */
 
 // Show header
 console.log('Facets Downloader')

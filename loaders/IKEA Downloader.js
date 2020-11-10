@@ -20,6 +20,6 @@ for (let i = 0; i < listings.length; i++) {
   console.log('Downloading ' + (i + 1) + '/' + listings.length + ' (' + listings[i].id + ')...')
 
   // Download catalogue file
-  var temp = require('../tools/request')('https://ikeacatalogues.ikea.com/sv-' + listings[i].id)
+  const temp = require('../tools/request')('https://ikeacatalogues.ikea.com/sv-' + listings[i].id)
   require('../tools/download')(temp.match(/"downloadPdfUrl":".+?"/).toString().slice(18, -1), listings[i].id + '.pdf')
 }

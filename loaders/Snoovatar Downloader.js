@@ -32,7 +32,7 @@ rl.question('reddit_session\n\t', answer => {
       // Do for each asset
       j.assets.forEach(k => {
         console.log('\t\t\t' + k.accessory_id)
-        require('../tools/download')(k.image_url, undefined, i + '/' + j.id, [], false)
+        require('../tools/download')(k.image_url, undefined, i + '/' + j.id, false)
       })
     })
   }

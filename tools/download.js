@@ -1,4 +1,4 @@
-module.exports = function (url, file = require('path').basename(url), dir = '.', args = [], sanitize = true) {
+module.exports = function (url, file = require('path').basename(url), dir = '.', sanitize = true) {
   const path = require('path')
   const execFileSync = require('child_process').execFileSync
   const fs = require('fs')
@@ -14,7 +14,7 @@ module.exports = function (url, file = require('path').basename(url), dir = '.',
   }
 
   try {
-    execFileSync('wget', [url, '-O', file, '-q', ...args])
+    execFileSync('wget', [url, '-O', file, '-q'])
   } catch (e) {
     console.log('wget error, skipping download.')
   }

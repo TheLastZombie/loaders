@@ -16,9 +16,9 @@ rl.question('reddit_session\n\t', answer => {
 
   // Get asset list
   console.log('accessories')
-  const response = require('../tools/request')('https://snoovatar.reddit.com/api/accessories', true, [
-    '--header=Cookie: reddit_session=' + answer
-  ])
+  const response = require('../tools/request')('https://snoovatar.reddit.com/api/accessories', true, {
+    Cookie: 'reddit_session=' + answer
+  })
   require('fs').writeFileSync('accessories.json', JSON.stringify(response))
 
   // Do for each category

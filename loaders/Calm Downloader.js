@@ -8,9 +8,9 @@ require('../tools/directory')('Calm')
 // Get scene database
 console.log('Retrieving scene database...')
 console.log('')
-const response = require('../tools/request')('https://api.app.aws-prod.useast1.calm.com/scenes', true, [
-  '--header=x-device-platform: www'
-])
+const response = require('../tools/request')('https://api.app.aws-prod.useast1.calm.com/scenes', true, {
+  'x-device-platform': 'www'
+})
 require('fs').writeFileSync('scenes', JSON.stringify(response))
 
 // Do for each scene

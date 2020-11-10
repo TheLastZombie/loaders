@@ -1,7 +1,9 @@
-module.exports = function (url, json, args = []) {
+module.exports = function (url, json, headers = {}) {
   const execFileSync = require('child_process').execFileSync
 
-  const response = execFileSync('wget', [url, '-O', '-', '-q', ...args], {
+  headers = Object.keys(headers).map(y => '--header=' + y + ': ' + headers[y])
+
+  const response = execFileSync('wget', [url, '-O', '-', '-q', ...headers], {
     maxBuffer: 1024 * 1024 * 1024
   }).toString()
 

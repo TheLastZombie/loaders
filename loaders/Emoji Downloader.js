@@ -8,7 +8,7 @@ require('../tools/directory')('Discord Emoji')
 // Get emoji database
 console.log('Retrieving emoji database...')
 console.log('')
-const response = require('../tools/request')('https://discordemoji.com/api', true)
+const response = require('../tools/request')('https://emoji.gg/api', true)
 require('fs').writeFileSync('api', JSON.stringify(response))
 
 // Do for each emoji

@@ -38,6 +38,7 @@ npm install
 | Behang Downloader         | Downloads all wallpapers from <a href="https://knokfirst.com/behang/">Behang</a> via their semi-public API.                                             |
 | Calm Downloader           | Downloads all scenes including photo, video and audio assets from <a href="https://www.calm.com/meditate">Calm</a>.                                     |
 | Earth View Downloader     | Downloads all images from the <a href="https://earthview.withgoogle.com/">Earth View</a> collection by Google.                                          |
+| Emoji Downloader          | Downloads all emotes from <a href="https://discordemoji.com/">Discord Emojis</a>.
 | Facets Downloader         | Downloads all <a href="http://www.facets.la/">Facets</a> images in all available resolutions via the app's facets.db.                                   |
 | Heritage Downloader       | Downloads photos, snapshots, music tracks and soundscapes for every heritage from the <a href="https://www.sony.net/united/clock/">α CLOCK</a> project. |
 | IKEA Downloader           | Downloads all IKEA catalogues from the <a href="https://ikeamuseum.com/">IKEA Museum</a> website.                                                       |

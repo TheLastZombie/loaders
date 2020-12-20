@@ -18,7 +18,6 @@ Automatic downloaders for various webpages and applications.
 | [IKEA Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/IKEA%20Downloader.js)                     | ✕                              |                                                        | ✕                                          |
 | [Snoovatar Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Snoovatar%20Downloader.js)           | ✕                              |                                                        | ✕                                          |
 | [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕                              |                                                        | ✕                                          |
-| [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js)         | ✕                              |                                                        | ✕                                          |
 
 ## Installation
 
@@ -44,4 +43,3 @@ npm install
 | [IKEA Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/IKEA%20Downloader.js)                     | Downloads all IKEA catalogues from the <a href="https://ikeamuseum.com/">IKEA Museum</a> website.                                                       |
 | [Snoovatar Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Snoovatar%20Downloader.js)           | Downloads all assets from Reddit's new <a href="https://snoovatar.reddit.com/static/client/">Snoo avatar builder</a>.                                   |
 | [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | Downloads all wallpapers from a <a href="https://github.com/danimahardhika/wallpaperboard">Wallpaperboard</a> source.                                   |
-| [yiff.party Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/yiff.party%20Downloader.js)         | Downloads the creators and all artist-specific JSON files from <a href="https://yiff.party/">yiff.party</a>.                                            |

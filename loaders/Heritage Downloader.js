@@ -39,6 +39,9 @@ for (let i = 0; i < a_clock_heritage_data.length; i++) {
       require('../tools/download')('https://di.update.sony.net/ACLK/wallpaper/' + a_clock_heritage_data[i].id + '/' + x + '/fp/' + a_clock_heritage_data[i].id + '_' + x + '_fp_' + (j + 1).toString().padStart(2, '0') + '.zip')
       process.stdout.write('.')
     })
+
+    require('../tools/download')('https://www.sony.net/united/clock/share/img/photo/' + a_clock_heritage_data[i].id + '/fp_hd/' + (j + 1).toString().padStart(2, '0') + '.jpg')
+    process.stdout.write('.')
   }
 
   // Download snapshots

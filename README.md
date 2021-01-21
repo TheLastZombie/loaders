@@ -4,27 +4,25 @@ Automatic downloaders for various webpages and applications.
 
 ## Requisites
 
-|                                                                                                                          | [Node.js](https://nodejs.org/) | [node-sqlite3](https://github.com/mapbox/node-sqlite3) | [Wget](https://www.gnu.org/software/wget/) |
-| :----------------------------------------------------------------------------------------------------------------------: | :----------------------------: | :----------------------------------------------------: | :----------------------------------------: |
-| [Abstruct Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Abstruct%20Downloader.js)             | ✕                              |                                                        | ✕                                          |
-| [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Archillect%20Downloader.js)         | ✕                              |                                                        | ✕                                          |
-| [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js)           | ✕                              |                                                        | ✕                                          |
-| [Behang Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Behang%20Downloader.js)                 | ✕                              |                                                        | ✕                                          |
-| [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js)                     | ✕                              |                                                        | ✕                                          |
-| [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js)       | ✕                              |                                                        | ✕                                          |
-| [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js)                   | ✕                              |                                                        | ✕                                          |
-| [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js)                 | ✕                              | ✕                                                      | ✕                                          |
-| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js)             | ✕                              |                                                        | ✕                                          |
-| [IKEA Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/IKEA%20Downloader.js)                     | ✕                              |                                                        | ✕                                          |
-| [Snoovatar Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Snoovatar%20Downloader.js)           | ✕                              |                                                        | ✕                                          |
-| [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕                              |                                                        | ✕                                          |
+|                                                                                                                          | [Deno](https://deno.land/) |
+| :----------------------------------------------------------------------------------------------------------------------: | :------------------------: |
+| [Abstruct Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Abstruct%20Downloader.js)             | ✕                          |
+| [Archillect Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Archillect%20Downloader.js)         | ✕                          |
+| [Backdrops Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Backdrops%20Downloader.js)           | ✕                          |
+| [Behang Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Behang%20Downloader.js)                 | ✕                          |
+| [Calm Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Calm%20Downloader.js)                     | ✕                          |
+| [Earth View Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Earth%20View%20Downloader.js)       | ✕                          |
+| [Emoji Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Emoji%20Downloader.js)                   | ✕                          |
+| [Facets Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Facets%20Downloader.js)                 | ✕                          |
+| [Heritage Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Heritage%20Downloader.js)             | ✕                          |
+| [IKEA Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/IKEA%20Downloader.js)                     | ✕                          |
+| [Snoovatar Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Snoovatar%20Downloader.js)           | ✕                          |
+| [Wallpaperboard Downloader](https://github.com/TheLastZombie/loaders/blob/master/loaders/Wallpaperboard%20Downloader.js) | ✕                          |
 
 ## Installation
 
 ```
 git clone https://github.com/TheLastZombie/loaders
-cd loaders
-npm install
 ```
 
 ## Loaders

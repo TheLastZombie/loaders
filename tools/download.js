@@ -1,17 +1,12 @@
 module.exports = function (url, file = require('path').basename(url), dir = '.', sanitize = true) {
   const path = require('path')
   const execFileSync = require('child_process').execFileSync
-  const fs = require('fs')
 
   if (sanitize) file = require('./sanitize')(file)
   if (sanitize) dir = require('./sanitize')(dir)
   file = path.resolve(dir, file)
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, {
-      recursive: true
-    })
-  }
+  require('./directory')(dir, true)
 
   try {
     execFileSync('wget', [url, '-O', file, '-q'])

@@ -36,5 +36,5 @@ categories.forEach(element => {
     })
   }
 
-  process.chdir('..')
+  require('../tools/directory')('..', true)
 })

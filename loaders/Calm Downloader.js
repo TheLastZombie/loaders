@@ -37,6 +37,6 @@ for (let i = 0; i < response.scenes.length; i++) {
   }
 
   // Return and flush
-  process.chdir('..')
+  require('../tools/directory')('..', true)
   console.log('')
 }

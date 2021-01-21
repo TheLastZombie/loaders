@@ -26,5 +26,5 @@ for (let i = 0; i < response.wallpapers.category.length; i++) {
     require('../tools/download')(response.wallpapers.category[i].wallpaper[j].url, response.wallpapers.category[i].wallpaper[j].name + require('../tools/extension')(response.wallpapers.category[i].wallpaper[j].url))
   }
 
-  process.chdir('..')
+  require('../tools/directory')('..', true)
 }

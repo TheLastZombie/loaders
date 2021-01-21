@@ -53,6 +53,6 @@ for (let i = 0; i < a_clock_heritage_data.length; i++) {
   }
 
   // Return and flush
-  process.chdir('..')
+  require('../tools/directory')('..', true)
   console.log('')
 }

@@ -20,5 +20,5 @@ for (let i = 0; i < response.wallList.length; i++) {
 
   // Download image file
   require('../tools/download')('https://backdrops.io/walls/upload/' + response.wallList[i].url, response.wallList[i].name + require('../tools/extension')(response.wallList[i].url))
-  process.chdir('..')
+  require('../tools/directory')('..', true)
 }

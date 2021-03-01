@@ -1,4 +1,4 @@
-module.exports = function (url, file = require('path').basename(url), dir = '.', sanitize = true) {
+module.exports = function (url, file = require('path').basename(url), dir = '.', sanitize = true, chdir = true) {
   const path = require('path')
   const execFileSync = require('child_process').execFileSync
 
@@ -6,7 +6,7 @@ module.exports = function (url, file = require('path').basename(url), dir = '.',
   if (sanitize) dir = require('./sanitize')(dir)
   file = path.resolve(dir, file)
 
-  require('./directory')(dir, true)
+  require('./directory')(dir, true, chdir)
 
   try {
     execFileSync('wget', [url, '-O', file, '-q'])

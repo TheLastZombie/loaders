@@ -14,6 +14,6 @@ for (let i = 1003; i < 7024; i++) {
   console.log('Downloading ' + (i - 1002) + '/' + (7023 - 1002) + ' (' + i + ')...')
 
   // Download image files
-  require('../tools/download')('https://www.gstatic.com/prettyearth/assets/full/' + i + '.jpg', undefined, 'www.gstatic.com')
-  require('../tools/download')('https://earthview.withgoogle.com/download/' + i + '.jpg', undefined, 'earthview.withgoogle.com')
+  require('../tools/download')('https://www.gstatic.com/prettyearth/assets/full/' + i + '.jpg', undefined, 'www.gstatic.com', undefined, false)
+  require('../tools/download')('https://earthview.withgoogle.com/download/' + i + '.jpg', undefined, 'earthview.withgoogle.com', undefined, false)
 }

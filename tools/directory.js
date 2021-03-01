@@ -1,11 +1,11 @@
-module.exports = function (name, silent) {
+module.exports = function (name, silent, chdir = true) {
   const fs = require('fs')
 
   name = require('./sanitize')(name)
 
   if (fs.existsSync(name)) {
     if (silent) {
-      process.chdir(name)
+      if (chdir) process.chdir(name)
     } else {
       throw Error('Directory "' + name + '" already exists!')
     }
@@ -13,6 +13,6 @@ module.exports = function (name, silent) {
     fs.mkdirSync(name, {
       recursive: true
     })
-    process.chdir(name)
+    if (chdir) process.chdir(name)
   }
 }

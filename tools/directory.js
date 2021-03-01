@@ -1,7 +1,7 @@
-module.exports = function (name, silent, chdir = true) {
+module.exports = function (name, silent, chdir = true, sanitize = true) {
   const fs = require('fs')
 
-  name = require('./sanitize')(name)
+  if (sanitize) name = require('./sanitize')(name)
 
   if (fs.existsSync(name)) {
     if (silent) {

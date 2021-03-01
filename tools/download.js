@@ -6,7 +6,7 @@ module.exports = function (url, file = require('path').basename(url), dir = '.',
   if (sanitize) dir = require('./sanitize')(dir)
   file = path.resolve(dir, file)
 
-  require('./directory')(dir, true, chdir)
+  require('./directory')(dir, true, chdir, sanitize)
 
   try {
     execFileSync('wget', [url, '-O', file, '-q'])

@@ -21,10 +21,6 @@ if (!fs.existsSync('../../facets.db')) {
 console.log('Importing Facets database...')
 const db = new sqlite3.Database('../../facets.db')
 
-// Parse imported database
-console.log('Parsing imported database...')
-console.log('')
-
 // Download Facets 365
 console.log('Downloading Facets 365...')
 console.log('')
